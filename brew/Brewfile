@@ -1,75 +1,141 @@
-tap "clojure/tools"
-tap "gromgit/fuse"
 tap "homebrew/bundle"
 tap "homebrew/cask-drivers", "https://mirrors.tuna.tsinghua.edu.cn/git/homebrew/homebrew-cask-drivers.git"
 tap "homebrew/cask-fonts", "https://mirrors.tuna.tsinghua.edu.cn/git/homebrew/homebrew-cask-fonts.git"
 tap "homebrew/cask-versions", "https://mirrors.tuna.tsinghua.edu.cn/git/homebrew/homebrew-cask-versions.git"
 tap "homebrew/command-not-found", "https://mirrors.tuna.tsinghua.edu.cn/git/homebrew/homebrew-command-not-found.git"
 tap "homebrew/services"
-tap "playcover/playcover"
-tap "spring-projects-experimental/spring-cli"
-brew "highway"
+tap "spring-attic/spring-cli", "https://github.com/spring-attic/homebrew-spring-cli.git", trusted: true
+# General-purpose data compression with high compression ratio
 brew "xz"
+# Core application library for C
 brew "glib"
+# GNU compiler collection
 brew "gcc"
+# Package compiler and linker metadata toolkit
+brew "pkgconf"
+# Cross-platform make
 brew "cmake"
+# MP3 player for Linux and UNIX
 brew "mpg123"
+# Play, record, convert, and stream select audio and video codecs
 brew "ffmpeg"
+# Command-line fuzzy finder written in Go
 brew "fzf"
-brew "go@1.19"
-brew "hugo"
-brew "lua"
-brew "mariadb@10.10", restart_service: true
+# Open source programming language to build simple/reliable/efficient software
+brew "go@1.24"
+# Performance-portable, length-agnostic SIMD with runtime dispatch
+brew "highway"
+# Drop-in replacement for MySQL
+brew "mariadb@10.10", restart_service: :changed
+# Java-based project management
 brew "maven"
-brew "neovim"
-brew "node@20"
+# Fast Cross-Platform Package Manager
+brew "micromamba"
+# Deep clean and optimize your Mac
+brew "mole"
+# Package for scientific computing with Python
 brew "numpy"
-brew "openvino"
+# Protocol buffers (Google's data interchange format)
 brew "protobuf"
+# Open Visual Inference And Optimization toolkit for AI inference
+brew "openvino"
+# Open source computer vision library
 brew "opencv"
+# PDF rendering library (based on the xpdf-3.0 code base)
 brew "poppler"
-brew "postgresql@15", restart_service: true
+# Object-relational database system
+brew "postgresql@15", restart_service: :changed
+# Go support for Google's protocol buffers
 brew "protoc-gen-go"
+# Protoc plugin that generates code for gRPC-Go clients
 brew "protoc-gen-go-grpc"
+# Core utilities for Python packages
 brew "python-packaging"
+# Persistent key-value database, with built-in net interface
 brew "redis"
-brew "rust"
-brew "scons"
+# 7-Zip is a file archiver with a high compression ratio
 brew "sevenzip"
+# Terminal multiplexer
 brew "tmux"
+# Display directories as trees (with optional color/HTML output)
 brew "tree"
+# Extremely fast Python package installer and resolver, written in Rust
+brew "uv"
+# Internet file retriever
 brew "wget"
+# Feature-rich command-line audio/video downloader
+brew "yt-dlp"
+# Fish-like fast/unobtrusive autosuggestions for zsh
 brew "zsh-autosuggestions"
+# Fish shell like syntax highlighting for zsh
 brew "zsh-syntax-highlighting"
-brew "spring-projects-experimental/spring-cli/spring-cli"
+# Spring CLI improves your productivity when creating new Spring projects or adding functionality to existing projects
+brew "spring-attic/spring-cli/spring-cli"
+# 3D creation suite
 cask "blender@lts"
+# Server and cloud storage browser
 cask "cyberduck"
+# Universal database tool and SQL client
 cask "dbeaver-community"
-cask "discord"
+# Developer platform
 cask "dotnet-sdk"
 cask "font-jetbrains-mono"
 cask "font-jetbrains-mono-nerd-font"
+# C# scripting capable version of Godot game engine
 cask "godot-mono"
+# Web browser
 cask "google-chrome"
-cask "intellij-idea-ce"
+# Java IDE by JetBrains
+cask "intellij-idea"
+# File archiver
 cask "keka"
-cask "kekaexternalhelper"
+# Customise mouse behavior
 cask "linearmouse"
-cask "microsoft-auto-update"
-cask "microsoft-remote-desktop"
+# Open-source cross-platform alternative to AirDrop
+cask "localsend"
+# Open-source software for live streaming and screen recording
 cask "obs"
+# Knowledge base that works on top of a local folder of plain text Markdown files
 cask "obsidian"
+# Replacement for Docker Desktop
 cask "orbstack"
-cask "postman"
+# IDE for professional Python development
+cask "pycharm"
+# Control your tools with a few keystrokes
 cask "raycast"
-cask "sfm"
-cask "squirrel"
+# .NET IDE
+cask "rider"
+# Rime input method engine
+cask "squirrel-app"
+# Open-source code editor
 cask "visual-studio-code"
+# Multimedia player
 cask "vlc"
+# GPU-accelerated cross-platform terminal emulator and multiplexer
 cask "wezterm"
-cask "zulu@21"
+# REST, GraphQL and gRPC client
+cask "yaak"
+# OpenJDK distribution from Azul
+cask "zulu@25"
+vscode "ms-azuretools.vscode-containers"
 vscode "ms-azuretools.vscode-docker"
 vscode "ms-ceintl.vscode-language-pack-zh-hans"
 vscode "ms-python.debugpy"
 vscode "ms-python.python"
 vscode "ms-python.vscode-pylance"
+vscode "ms-python.vscode-python-envs"
+go "github.com/go-delve/delve/cmd/dlv"
+go "github.com/zeromicro/go-zero/tools/goctl"
+go "github.com/fatih/gomodifytags"
+go "github.com/haya14busa/goplay/cmd/goplay"
+go "golang.org/x/tools/gopls"
+go "github.com/cweill/gotests/gotests"
+go "github.com/josharian/impl"
+go "github.com/go-kratos/kratos/cmd/kratos/v2"
+go "google.golang.org/protobuf/cmd/protoc-gen-go"
+go "github.com/go-kratos/kratos/cmd/protoc-gen-go-errors/v2"
+go "google.golang.org/grpc/cmd/protoc-gen-go-grpc"
+go "github.com/go-kratos/kratos/cmd/protoc-gen-go-http/v2"
+go "github.com/google/gnostic/cmd/protoc-gen-openapi"
+go "honnef.co/go/tools/cmd/staticcheck"
+npm "corepack"
